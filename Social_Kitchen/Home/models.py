@@ -49,9 +49,9 @@ class Dish(models.Model):
     price = models.DecimalField(max_digits=25, decimal_places=2)
     description = models.TextField(max_length=400)
     category =models.ForeignKey(DishCategory, on_delete=models.CASCADE)
-    image_url = models.CharField(max_length=200)
+    image = models.ImageField( null = True)
 
-
+    
 
 class Cart(models.Model):
     customer = models.ForeignKey(User , on_delete=models.CASCADE)
@@ -67,6 +67,8 @@ class CartItem(models.Model):
     quantity = models.IntegerField()
     price = models.DecimalField(max_digits=25, decimal_places=2)
 
+    def __str__(self):
+        return str(self.dish)
 
 
 
