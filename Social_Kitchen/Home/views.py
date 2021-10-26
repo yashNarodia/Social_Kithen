@@ -6,6 +6,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
+from django.core.mail import EmailMessage
+from django.conf import settings
+from django.template.loader import render_to_string
+
 
 # Create your views here.
 def HomePage(request):
@@ -24,6 +28,7 @@ def SignUpPage(request):
             messages.success(request,'Account was Successfully Created for ' + firstName )
             return redirect('/login')
             
+        
     context={ "form" : form }
     return render(request,"Signup.html",context)
 
