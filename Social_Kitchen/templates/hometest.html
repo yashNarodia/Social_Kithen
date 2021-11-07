@@ -1,0 +1,263 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>SOCIAL KITCHEN</span></h1>  
+          <h2>~ great meals on your plate</h2>
+
+          <div class="btns">
+            <a href="#" class="btn-menu animated fadeInUp scrollto">Order Now</a>
+            <a href="{% url 'TableReservation' %}" class="btn-book animated fadeInUp scrollto">Book a Table</a>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in"
+          data-aos-delay="200">
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="{% static 'img/about.jpg' %}" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>We welcome you to Social Kitchen!!</h3>
+            <p class="fst-italic">
+              You can sit back, unwind and appreciate the lovely sights and hints of the restaurant while our best
+              gourmet expert sets you up a scrumptious dinner utilizing the best and freshest ingredients.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> BEST QUALITY FOOD </li>
+              <li><i class="bi bi-check-circle"></i> HOSPITABLE ATMOSPHERE </li>
+              <li><i class="bi bi-check-circle"></i> REASONABLE COST </li>
+            </ul>
+            <p>
+              SOCIAL KITCHEN has worked for people in general and has advanced into a combination between exquisite chic
+              and contemporary fine charge.
+              Enjoy our dazzling dishes and make the most of your eating background with us!
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Why Us</h2>
+          <p>Why Choose Our Restaurant</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>01</span>
+              <h4>CLEANLINESS</h4>
+              <p>Our restaurant is always kept clean, because without cleanliness the health of our
+                employees and customers can be affected. We Make sure
+                that our service and dining area is clean at all times.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+              <span>02</span>
+              <h4>GOOD SERVICE</h4>
+              <p>We serve you great food and the people who serve it are friendly
+                and courteous. We offer you great service.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+              <span>03</span>
+              <h4> ON TIME DELIVERY</h4>
+              <p>We promise you that you will not have to wait for hours for your food. We gurantee you on time delivery
+                as fast as possible. </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Events</h2>
+          <p>Organize Your Events in our Restaurant</p>
+        </div>
+
+        <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-6">
+                  <img src=" {% static  'img/events/event-birthday.jpg'%}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Birthday Parties</h3>
+                  <div class="price">
+                    <p><span>Rs. 10,000 </span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Book best surprise birthday party in out Restaurant. We put together a three course meal and also we
+                    will bring our you a delicious cake.
+                  </p>
+
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-6">
+                  <img src= "{% static 'img/events/event-private.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Private Parties</h3>
+                  <div class="price">
+                    <p><span>Rs. 12,000</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    A complimentary service providing options for Parties, Group Dining, Catering for your
+                    Private Events at Social Kitchen.
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'img/events/custom.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Custom Parties</h3>
+                  <div class="price">
+                    <p><span>Rs. 15000</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    You will be enjoying your parties by choosing your menu and style of the party. We ensure good quality food and proper management. 
+                  
+                  </p>
+                  
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Events Section -->
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Some photos from Our Restaurant</p>
+        </div>
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'img/gallery/gallery-1.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'img/gallery/gallery-2.jpg' %} " class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'img/gallery/gallery-2.jpg' %} " alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'img/gallery/gallery-3.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'img/gallery/gallery-3.jpg' %} " alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'img/gallery/gallery-4.jpg' %} " class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'img/gallery/gallery-4.jpg' %} " alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'img/gallery/gallery-5.jpg' %" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'img/gallery/gallery-5.jpg' %} " alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'img/gallery/gallery-6.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'img/gallery/gallery-6.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'img/gallery/gallery-7.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'img/gallery/gallery-7.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'img/gallery/gallery-8.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'img/gallery/gallery-8.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+
+
+  </main><!-- End #main -->
+{% endblock content  %}

@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                <div class="about-img">
+                    <img src="{% static 'img/about.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                <h3>We welcome you to Social Kitchen!!</h3>
+                <p class="fst-italic">
+                    You can sit back, unwind and appreciate the lovely sights and hints of the restaurant while our best
+                    gourmet expert sets you up a scrumptious dinner utilizing the best and freshest ingredients.
+                </p>
+                <ul>
+                    <li><i class="bi bi-check-circle"></i> BEST QUALITY FOOD </li>
+                    <li><i class="bi bi-check-circle"></i> HOSPITABLE ATMOSPHERE </li>
+                    <li><i class="bi bi-check-circle"></i> REASONABLE COST </li>
+                </ul>
+                <p>
+                    SOCIAL KITCHEN has worked for people in general and has advanced into a combination between
+                    exquisite chic
+                    and contemporary fine charge.
+                    Enjoy our dazzling dishes and make the most of your eating background with us!
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section><!-- End About Section -->
+{% endblock content %}

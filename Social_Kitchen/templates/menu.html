@@ -1,0 +1,272 @@
+{% extends 'main.html' %}
+{% load static %} 
+{% block content %}
+
+<!-- ======= Menu Section ======= -->
+<section id="menu" class="menu section-bg">
+  <div class="container " data-aos="fade-up">
+    <div class="section-title">
+      <h2>Menu</h2>
+      <p>Check Our Tasty Menu</p>
+    </div>
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="menu-flters">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-starters">Starters</li>
+          <li data-filter=".filter-main">Main Course</li>
+          <li data-filter=".filter-desserts">Desserts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+      <!--STARTERS-->
+
+      <div class="col-lg-6 menu-item filter-starters">
+        <img src="{% static 'img/menu/springroll.jfif' %} " class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Spring Roll</a><span>Rs.150</span>
+        </div>
+        <div class="menu-ingredients">
+          Chinese food consisting of a small roll of thin pastry filled with
+          vegetables and then fried.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-starters">
+        <img src="{% static 'img/menu/manchurian.jpg' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Gravy Manchurian</a><span>Rs.90</span>
+        </div>
+        <div class="menu-ingredients">Fried veggies in spicy-umami sauce.</div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-starters">
+        <img src= "{% static 'img/menu/noodles.jfif' %}"  class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Hakka Noodles</a><span>Rs.100</span>
+        </div>
+        <div class="menu-ingredients">
+          Typically made from unleavened wheat dough and are stretched,
+          extruded, or rolled, and then cut into varying shapes.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-starters">
+        <img src="{% static 'img/menu/paneer_chilli.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Paneer Chilli</a><span>Rs.80</span>
+        </div>
+        <div class="menu-ingredients">
+          Innovative recipe with the traditional paneer is a combination of the
+          best of Indian and Chinese.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-starters">
+        <img src="{% static 'img/menu/samosa.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Samosas</a><span>Rs.60</span>
+        </div>
+        <div class="menu-ingredients">
+          Baked pastry with a savory filling like spiced potatoes, onions, peas,
+          or lentils.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-starters">
+        <img src="{% static 'img/menu/seekh_kababs.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Hara Bhara Kababs</a><span>Rs.110</span>
+        </div>
+        <div class="menu-ingredients">
+          Fried patties made with spinach, peas and potatoes.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-starters">
+        <img src="{% static 'img/menu/tacos.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content"><a href="#">Tacos</a><span>Rs.150</span></div>
+        <div class="menu-ingredients">
+          A tortilla filled with various ingredients, as beans, rice, cheese.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-starters">
+        <img src="{% static 'img/menu/french_fries.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">French Fries</a><span>Rs.90</span>
+        </div>
+        <div class="menu-ingredients">
+          Prepared by cutting the potato into even strips, then drying and
+          frying it, usually in a deep fryer.
+        </div>
+      </div>
+      <!--MAIN COURSE-->
+      <div class="col-lg-6 menu-item filter-main">
+        <img src="{% static 'img/menu/pizza.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content"><a href="#">Pizza</a><span>Rs.120</span></div>
+        <div class="menu-ingredients">
+          Flattened disk of bread dough topped with some combination of olive
+          oil, oregano, tomato, olives, mozzarella or other cheese, and other
+          ingredients.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-main">
+        <img src="{% static 'img/menu/sizzlers.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Sizzlers</a><span>Rs.300</span>
+        </div>
+        <div class="menu-ingredients">
+          open-roasted, grilled or shallow fried piece of vegetable patty,
+          served with french fries, shredded cabbage, tomatoes, carrots, french
+          beans etc.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-main">
+        <img src="{% static 'img/menu/pasta.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content"><a href="#">Pasta</a><span>Rs.200</span></div>
+        <div class="menu-ingredients">
+          Italian food made from flour and water and shaped in different forms,
+          cooked and served with a sauce.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-main">
+        <img src="{% static 'img/menu/fast_food.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Happy Meal</a><span>Rs.350</span>
+        </div>
+        <div class="menu-ingredients">
+          Includes burgers, fries, frankie, coke.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-main">
+        <img src="{% static 'img/menu/punjabi.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Punjabi Thaali</a><span>Rs.450</span>
+        </div>
+        <div class="menu-ingredients">
+          Includes 2 Sabzis, Butter Naan, Salad, Lassi/Buttermilk, Dal and Rice
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-main">
+        <img src="{% static 'img/menu/gujarati.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Gujarati Thaali</a><span>Rs.450</span>
+        </div>
+        <div class="menu-ingredients">
+          Includes 2 Sabzis, Roti, Salad, Buttermilk, Khaman Dhokla, Dahi, Dal
+          and Rice
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-main">
+        <img src="{% static 'img/menu/south_indian.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">South Indian Thaali</a><span>Rs.450</span>
+        </div>
+        <div class="menu-ingredients">
+          Includes Dosa, Idli, Uttapam, Medu Vada, Sambhar, Coconut Chutney,
+          Rice.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-main">
+        <img src="{% static 'img/menu/rajasthani.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Rajashtani food</a><span>Rs.350</span>
+        </div>
+        <div class="menu-ingredients">
+          Includes Daal, Baati, Churma, Gulab Sharbat
+        </div>
+      </div>
+
+      <!--Desserts-->
+
+      <div class="col-lg-6 menu-item filter-desserts">
+        <img src="{% static 'img/menu/gulab_jamun.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Gulab Jamun</a><span>Rs.100</span>
+        </div>
+        <div class="menu-ingredients">Gujarati sweet in sugar syrup.</div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-desserts">
+        <img src="{% static 'img/menu/chocolate_pastry.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Pastry</a><span>Rs.130</span>
+        </div>
+        <div class="menu-ingredients">
+          Includes Chocolate/ Strawberry/ Pineapple/ Dark Forest flavours
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-desserts">
+        <img src="{% static 'img/menu/sticks.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Chocolate Sticks</a><span>Rs.90</span>
+        </div>
+        <div class="menu-ingredients">Sticks dipped in Chocolate Syrup.</div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-desserts">
+        <img src="{% static 'img/menu/milkshake.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Chocolate Milkshake</a><span>Rs.160</span>
+        </div>
+        <div class="menu-ingredients">
+          Includes Chocolates: Kitkat & Dairy Milk, Caramel, Whipped Cream
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-desserts">
+        <img src="{% static 'img/menu/oreoshake.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Oreo Shake</a><span>Rs.150</span>
+        </div>
+        <div class="menu-ingredients">
+          Shake made with cream, oreo biscuits, chocolate chips.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-desserts">
+        <img src="{% static 'img/menu/waffles.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Waffles</a><span>Rs.120</span>
+        </div>
+        <div class="menu-ingredients">
+          Includes Chocolate/ Strawberry/ Classic flavours.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-desserts">
+        <img src="{% static 'img/menu/pancakes.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Pancakes</a><span>Rs.170</span>
+        </div>
+        <div class="menu-ingredients">
+          Includes Blueberry/ Banana/ Oatmeal pancakes.
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-desserts">
+        <img src="{% static 'img/menu/donuts.jfif' %}" class="menu-img" alt="" />
+        <div class="menu-content">
+          <a href="#">Donuts</a><span>Rs.200</span>
+        </div>
+        <div class="menu-ingredients">
+          Includes Choconuttzy/ White Chocolate/ Sugar Ice/ Blueberry Flavours.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Menu Section -->
+{% endblock content %}

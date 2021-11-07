@@ -1,0 +1,66 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<section id="book-a-table" class="book-a-table">
+  <div class="container" data-aos="fade-up">
+
+  {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show mt-5 " role="alert">
+        <strong>Message : </strong> {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+
+    <div class="section-title mx-5 ">
+      <h2>Reservation</h2>
+      <p>Book a Table</p>
+    </div>
+
+    <form action="" method="POST" role="form" class="django" data-aos="fade-up" data-aos-delay="100">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-lg-4 col-md-6 form-group">
+          {{form.name.label}}
+          {{form.name}}
+          <div class="validate"></div>
+        </div>
+        <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+          {{form.email.label}}
+          {{form.email}}
+          <div class="validate"></div>
+        </div>
+        <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+          {{form.phoneNumber.label}}
+          {{form.phoneNumber}}
+          <div class="validate"></div>
+        </div>
+        <div class="col-lg-4 col-md-6 form-group mt-3">
+          {{form.date.label}}
+          {{form.date}}
+          <div class="validate"></div>
+        </div>
+        <div class="col-lg-4 col-md-6 form-group mt-3">
+          {{form.time.label}}
+          {{form.time}}
+          <div class="validate"></div>
+        </div>
+        <div class="col-lg-4 col-md-6 form-group mt-3">
+
+          {{form.partySize.label}}
+          {{form.partySize}}
+
+          <div class="validate"></div>
+        </div>
+      </div>
+      <div class="text-center pt-3"><button type="submit" class="btn btn-primary">Book Table</button></div>
+    </form>
+  </div>
+</section>
+<!-- End Book A Table Section -->
+
+
+{% endblock content %}

@@ -5,21 +5,30 @@ from django.contrib.auth.admin import UserAdmin
 
 class TableAdmin(admin.ModelAdmin):
     list_display= ('name','partySize','time', 'date','phoneNumber')
-    
 
 admin.site.register(TableReservation, TableAdmin)
 
-class CartAdmin(admin.ModelAdmin):
-    list_display= ('customer','subTotal')
-    
-admin.site.register(Cart , CartAdmin)
-admin.site.register(CartItem)
-admin.site.register(Dish)
-admin.site.register(Review)
-admin.site.register(Order)
-admin.site.register(OrderItem)
+admin.site.register(Customer)
+
+class DishAdmin(admin.ModelAdmin):
+    list_display = ('name','category','price')
+
+admin.site.register(Dish,DishAdmin)
 admin.site.register(DishCategory)
 
+class OrderAdmin(admin.ModelAdmin):
+    list_display=['id','customer']
+
+admin.site.register(Order,OrderAdmin)
+
+class OrderItemAdmin(admin.ModelAdmin):
+    list_display=['order','dish','quantity']
+admin.site.register(OrderItem,OrderItemAdmin)
+
+class AddressAdmin(admin.ModelAdmin):
+    list_display=['customer','Address']
+
+admin.site.register(Customer_Address,AddressAdmin)
 
 
 

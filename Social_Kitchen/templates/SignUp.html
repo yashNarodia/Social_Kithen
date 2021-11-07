@@ -1,54 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+{% extends 'main.html' %}
+{% load static %}
+{% block  content %}
 
-    <title>SignUp</title>
-</head>
-<body>
     {% for messge in messges %}
     <div class="alert alert-{{messge.tags}} alert-dismissible fade show" role="alert">
         <strong>Messge : </strong> {{messge}}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     {% endfor %}
-    <h1>SignUp</h1>
-    <form method="POST" action="" >
+    <div class="container aos-init aos-animate">
+        <div class="section-title" id= "Signup" >
+            <h1>Sign Up</h1>
+        </div>
+    
+    <form action="" method="POST" role="form" class="django" data-aos="fade-up" data-aos-delay="100">
         {% csrf_token %}
+        <div class="row pt-4">
+            <div class="row-lg-4 row-md-5 mt-3 mt-md-3 ">
         {{form.first_name.label}}
         {{form.first_name}}
-        <br>
+            <div class="validate"></div>
+        </div>
+        <div class="row-lg-4 row-md-6  mt-3 mt-md-3">
         {{form.last_name.label}}
         {{form.last_name}}
-        <br>
+            <div class="validate"></div>
+        </div>
+        <div class="row-lg-4 row-md-6  mt-3 mt-md-3">
         {{form.username.label}}
         {{form.username}}
-        <br>
+        </div>
+        <div class="row-lg-4 row-md-6  mt-3 mt-md-3">
         {{form.email.label}}
         {{form.email}}
-        <br>
+        </div>
+        <div class="row-lg-4 row-md-6  mt-3 mt-md-3">
         {{form.MobileNo.label}}
         {{form.MobileNo}}
-        <br>
+        </div>
+        <div class="row-lg-4 row-md-6  mt-3 mt-md-3">
         {{form.password1.label}}
         {{form.password1}}
-        <br>
+        </div>
+        <div class="row-lg-5 row-md-6  mt-3 mt-md-3">
         {{form.password2.label}}
         {{form.password2}}
-        <br>
-        <input type="submit" value="Submit">
+        </div>
+        <div class="text-center pt-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        {{form.errors}}
+        </div>
     </form>
-    {{form.errors}}
     <div>
         <p class="">Don't have an account? 
         <a href="{% url 'login' %}" class="">Login</a></p>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
-    
-
-</body>
-</html>
+</div>
+{% endblock content %}

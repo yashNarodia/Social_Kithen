@@ -1,0 +1,74 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<link href="{% static 'css/cartmain.css' %}" rel="stylesheet">
+<section id="menu" class="menu section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>YOUR CART</h2>
+        </div>
+
+        <div class="small-container cart-page">
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+                {% for item in items %}
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="{{item.dish.image.url}}" class="cart-img" alt="">
+                            <div>
+                                <p>{{item.dish.name}}</p>
+                                <small>Price:{{item.dish.price|floatformat:2}}</small>
+                                <br>
+                                <a href="">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <p class= "quantity"> {{item.quantity}}</p>
+                        <div class="quantity">
+                            <img data-Dish="{{item.dish.id}}" data-action="add" class="chg-quantity update-cart"
+                                src="{% static  'img/arrow-up.png' %}">
+
+                            <img data-Dish="{{item.dish.id}}" data-action="remove" class="chg-quantity update-cart"
+                                src="{% static  'img/arrow-down.png' %}">
+                        </div>
+                    </td>
+                    <td>
+                        ₹{{item.get_total}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <div class="total-price">
+                <table>
+                    <tr>
+                        <td>SUBTOTAL</td>
+                        <td>₹{{order.get_Cart_total|floatformat:2}}</td>
+                    </tr>
+                    <tr>
+                        <td>TOTAL</td>
+                        <td>₹{{order.get_Cart_total|floatformat:2}}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="{% url 'Checkout' %}">
+                                <button type="button" class="btn btn-warning">ORDER NOW</button>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="warning">*Payment only on cash</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--======End of Cart======-->
+    {%endblock content %}
