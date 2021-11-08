@@ -6,3 +6,9 @@
       border-bottom: 1px solid #ececec;
   
   }
+
+  .form-center {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
